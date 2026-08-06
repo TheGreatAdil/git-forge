@@ -1,6 +1,5 @@
 "use client";
 
-import CircularText from "@/components/CircularText";
 import ShinyText from "@/components/ShinyText";
 import TextLoop from "@/components/TextLoop";
 import { names } from "@/data";
