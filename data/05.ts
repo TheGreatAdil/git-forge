@@ -1,1 +1,1 @@
-export const name = "Seraphina"
+export const name = "Amina Safa"
