@@ -111,7 +111,12 @@ const TextLoop = ({
   }, [text, separator, uppercase]);
 
   const textStyle = useMemo<CSSProperties>(
-    () => ({ fontSize: `${fontSize}px`, fontWeight, letterSpacing: `${letterSpacing}px` }),
+    () => ({
+      fontSize: `${fontSize}px`,
+      fontWeight,
+      letterSpacing: `${letterSpacing}px`,
+      fontFamily: 'var(--font-geist-mono), monospace'
+    }),
     [fontSize, fontWeight, letterSpacing]
   );
 

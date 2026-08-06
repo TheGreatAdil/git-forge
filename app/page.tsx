@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <section id="hero" className="w-full bg-black">
         <TextLoop
-          text="Git ✦ Forge"
+          text="Git ✦ Forge ✦ Contributors"
           shape="wave"
           speed={90}
           direction="forward"
@@ -32,22 +32,24 @@ export default function Home() {
         className="w-full bg-black flex justify-center items-center"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-32 pb-32">
-          {names.map((name, index) => (
-            <ShinyText
-              key={index}
-              text={name.replace(" ", " ✦ ")}
-              speed={2}
-              delay={0}
-              color="#552ffb"
-              shineColor="#ffffff"
-              spread={240}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-              disabled={false}
-              className="text-2xl md:text-4xl font-geist-mono text-center"
-            />
-          ))}
+          {names
+            .filter((name) => !/^\d+$/.test(name))
+            .map((name, index) => (
+              <ShinyText
+                key={index}
+                text={name.replaceAll(" ", " ✦ ")}
+                speed={2}
+                delay={0}
+                color="#552ffb"
+                shineColor="#ffffff"
+                spread={240}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+                className="text-2xl md:text-4xl font-mono text-center"
+              />
+            ))}
         </div>
       </section>
     </>
